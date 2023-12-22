@@ -1,5 +1,4 @@
 chess==1.9.4
-PyYAML==5.4.1  # Use a version compatible with Python 3.12
 requests==2.28.2
 backoff==2.2.1
 rich==13.3.1
