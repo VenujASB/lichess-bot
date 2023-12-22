@@ -26,7 +26,7 @@ RUN unzip stockfish.zip && rm stockfish.zip
 RUN mv stockfish_* engines/stockfish && chmod +x engines/stockfish
 
 # Make sure the Stockfish binary is executable
-RUN chmod +x engines/stockfish
+RUN chmod +x engines/stockfish15
 
 # Set the command to run when the container starts
 CMD python3 lichess-bot.py -u
