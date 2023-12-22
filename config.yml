@@ -9,7 +9,7 @@ engine:                      # Engine settings.
   ponder: true               # Think on opponent's time.
 
   polyglot:
-    enabled: true            # Activate polyglot book.
+    enabled: false            # Activate polyglot book.
     book:
       standard:              # List of book file paths for variant standard.
         - engines/books/Goi5.1.bin
