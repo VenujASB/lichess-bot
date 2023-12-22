@@ -1,1 +1,1 @@
-python3 lichess-bot.py -u
+worker: python3 lichess-bot.py -u
