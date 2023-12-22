@@ -11,7 +11,7 @@ RUN echo OIVAS7572
 COPY . .
 
 # Update package lists and install necessary packages
-RUN apt update > aptud.log && apt install -y wget python3 python3-pip p7zip-full > apti.log
+RUN apt update > aptud.log && apt install -y wget python3 python3-pip p7zip-full unzip > apti.log
 
 # Install Python dependencies from requirements.txt
 RUN python3 -m pip install --no-cache-dir -r requirements.txt > pip.log
@@ -22,7 +22,7 @@ RUN wget --no-check-certificate -nv "https://gitlab.com/OIVAS7572/Goi5.1.bin/-/r
 
 # Download and install Stockfish
 RUN wget https://abrok.eu/stockfish/latest/linux/stockfish_x64_bmi2.zip -O stockfish.zip
-RUN 7z e stockfish.zip && rm stockfish.zip
+RUN unzip stockfish.zip && rm stockfish.zip
 RUN mv stockfish_* engines/stockfish && chmod +x engines/stockfish
 
 # Make sure the Stockfish binary is executable
